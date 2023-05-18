@@ -1,0 +1,11 @@
+
+{% autoescape off %}
+    Hi {{ user.f_name }}.
+
+    {% if is_approved %}
+        Your account has been approved.
+    {% else %}
+        Sorry! Your account has been rejected. For more information, please contact us at @mosesayandau1@gmail.com.
+    {% endif %}
+
+{% endautoescape %}

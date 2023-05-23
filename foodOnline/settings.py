@@ -24,6 +24,7 @@ INSTALLED_APPS = [
     'django.contrib.admin',
     'accounts',
     'vendor',
+    'menu',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -55,6 +56,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'accounts.context_processors.get_vendor',
+                'accounts.context_processors.get_google_api',
             ],
         },
     },
@@ -140,3 +142,5 @@ EMAIL_HOST_PASSWORD = 'zhjkbxwfktmnrzmo'
 
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = 'foodOline Marketplace <mosesayandau1@gmail.com>'
+
+GOOGLE_API_KEY = 'AIzaSyB28K75oe8by02dvWDpq4j3Wn1LI8b8AIU'

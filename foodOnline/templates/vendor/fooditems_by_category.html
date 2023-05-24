@@ -33,8 +33,21 @@
 
                                                   <td class="text-left">
                                                       <a href="#" ><p class="mb-0 font-weight-bold">{{ fooditem }}</p><small class="text-muted">{{ fooditem.description }}</small>
-                                                      </a> </td>
-                                                  <td><i class="fa fa-edit" aria-hidden="true"></i> &nbsp; &nbsp;<i class="fa fa-trash text-danger" aria-hidden="true"></i></td>
+                                                      </a>
+                                                  </td>
+
+                                                  <td>
+                                                  {% if fooditem.is_available %}
+                                                      <span class="badge bg-success">Available</span>
+                                                  {% else %}
+                                                      <span class="badge bg-danger">Not Available</span>
+                                                  {% endif %}
+                                                    </td>
+
+                                                  <td>
+
+                                                        <a href="{% url 'edit_food' fooditem.id %}" style="color: unset"><i class="fa fa-edit" aria-hidden="true"></i></a> &nbsp; &nbsp; <a href="{% url 'delete_food' fooditem.id %}" onclick="return confirm('Are you sure you want to delete {{ fooditem.food_title }}')"><i class="fa fa-trash text-danger" aria-hidden="true"></i></a>
+                                                    </td>
 
                                                 </tr>
                                           </tbody>

@@ -25,6 +25,7 @@ INSTALLED_APPS = [
     'accounts',
     'vendor',
     'menu',
+    'marketplace',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
